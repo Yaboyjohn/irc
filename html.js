@@ -1,25 +1,20 @@
-import React from 'react'
-import Helmet from "react-helmet"
+import React, { Component, PropTypes } from 'react';
+import Helmet from 'react-helmet';
+import { prefixLink } from 'gatsby-helpers';
 
-import { prefixLink } from 'gatsby-helpers'
-import { TypographyStyle, GoogleFont } from 'react-typography'
-import typography from './utils/typography'
+const BUILD_TIME = new Date().getTime();
 
-const BUILD_TIME = new Date().getTime()
+export default class Html extends Component {
+  render() {
+    const head = Helmet.rewind();
 
-module.exports = React.createClass({
-  propTypes () {
-    return {
-      body: React.PropTypes.string,
-    }
-  },
-  render () {
-    const head = Helmet.rewind()
-
-    let css
-    if (process.env.NODE_ENV === 'production') {
-      css = <style dangerouslySetInnerHTML={{ __html: require('!raw!./public/styles.css') }} />
-    }
+    const css = process.env.NODE_ENV === 'production' ? (
+      <style
+        dangerouslySetInnerHTML={{
+          __html: require('!raw!./public/styles.css')
+        }}
+      />
+    ) : null;
 
     return (
       <html lang="en">
@@ -32,15 +27,23 @@ module.exports = React.createClass({
           />
           {head.title.toComponent()}
           {head.meta.toComponent()}
-          <TypographyStyle typography={typography} />
-          <GoogleFont typography={typography} />
           {css}
         </head>
         <body>
-          <div id="react-mount" dangerouslySetInnerHTML={{ __html: this.props.body }} />
+          <div
+            id="react-mount"
+            dangerouslySetInnerHTML={{
+              __html: this.props.body
+            }}
+          />
           <script src={prefixLink(`/bundle.js?t=${BUILD_TIME}`)} />
         </body>
       </html>
-    )
-  },
-})
+    );
+  }
+}
+
+Html.propTypes = {
+  body: PropTypes.string
+};
+

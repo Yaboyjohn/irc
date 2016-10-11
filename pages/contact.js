@@ -4,15 +4,15 @@ import { config } from 'config';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
-export default class Home extends Component {
+export default class Contact extends Component {
   render () {
     return (
-      <div className="page page--home">
+      <div className="page page--contact">
         <Helmet
           title={config.siteTitle}
         />
         <h1>
-          Home
+          Contact
         </h1>
       </div>
     );

@@ -1,7 +1,4 @@
-# gatsby-starter-default
-The default Gatsby starter
+# International Relations Council at Berkeley Website
 
-Install this starter (assuming Gatsby is installed) by running from your CLI:
-```
-gatsby new gatsby-example-site
-```
+By [Innovative Design](http://innovativedesign.club)
+

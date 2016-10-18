@@ -10,6 +10,7 @@ export default class Template extends Component {
     return (
       <div>
         <Headroom>
+          <div className="navbar">
           <Link
             to={prefixLink('/')}
           >
@@ -39,6 +40,7 @@ export default class Template extends Component {
           >
             Contact
           </Link>
+        </div>  
         </Headroom>
 
         <div className="content">
@@ -52,4 +54,3 @@ export default class Template extends Component {
 Template.propTypes = {
   children: PropTypes.any
 };
-

@@ -10,3 +10,18 @@
 @import "components/index";
 @import "pages/index";
 
+.navbar {
+  width: 75%;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: #EEEEEE;
+}
+
+body {
+  background-image: url("lit.jpeg");
+  -webkit-background-size: cover;
+ -moz-background-size: cover;
+ background-size: cover;
+}

@@ -31,11 +31,9 @@ export default class Events extends Component {
             <div className="events__col--2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid voluptate soluta dolorum dignissimos in nostrum eum recusandae similique, at facilis ad quaerat rerum magnam commodi obcaecati, voluptas magni culpa quidem.
               </div>
           </div>
-
         </div>
 
       </div>
     );
   }
 }
-

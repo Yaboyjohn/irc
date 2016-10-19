@@ -1,8 +1,6 @@
 // Events
 
-
 .page--events {
-
   .events__title {
     text-align:center;
     font-size:40px;
@@ -39,16 +37,14 @@
     display:inline-block;
   }
 
-  @media (max-width:$s__breakpoint--large)
-  {
+  @media (max-width:$s__breakpoint--large) {
     .events__content {
-    width:100%;
+      width:100%;
     }
 
   }
 
-  @media (max-width:$s__breakpoint--small)
-  {
+  @media (max-width:$s__breakpoint--small) {
 
     .events__col--1 {
       text-align:center;
@@ -62,6 +58,5 @@
       padding-right:0px;
     }
   }
-
 }
 

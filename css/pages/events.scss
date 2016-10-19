@@ -1,0 +1,67 @@
+// Events
+
+
+.page--events {
+
+  .events__title {
+    text-align:center;
+    font-size:40px;
+    padding-top:50px;
+    padding-bottom:75px;
+  }
+
+  .events__content {
+    background-color:none;
+    width:$s__breakpoint--large;
+    margin: 0 auto;
+  }
+
+  .events__col--1 {
+    font-size:25px;
+    color:teal;
+    padding:15px;
+    width:28%;
+    text-align:right;
+    background-color:none;
+    float:left;
+  }
+
+  .events__col--2 {
+    width:70%;
+    background-color:none;
+    padding:15px;
+    font-size:20px;
+    float:right;
+    padding-right:50px;
+  }
+
+  .content__section {
+    display:inline-block;
+  }
+
+  @media (max-width:$s__breakpoint--large)
+  {
+    .events__content {
+    width:100%;
+    }
+
+  }
+
+  @media (max-width:$s__breakpoint--small)
+  {
+
+    .events__col--1 {
+      text-align:center;
+      width:100%;
+      float:none;
+    }
+
+    .events__col--2 {
+      float:none;
+      width:100%;
+      padding-right:0px;
+    }
+  }
+
+}
+

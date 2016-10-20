@@ -1,5 +1,5 @@
-//Contact 
-.page--contact { 
+//Contact
+.page--contact {
 	margin:auto;
 	width:100%;
 
@@ -16,14 +16,15 @@
 		a {
 			text-decoration:none !important;
 		}
-		
+
 		.media--icon {
 	    font-size:200%;
 	    color:#C0C0C0;
 	    padding-top: 40px;
-	 
-      &.fb {  
+
+      &.fb {
       	margin-right:30px;
+
         &:hover {
           color:#3b5998;
         	transition:color 250ms;

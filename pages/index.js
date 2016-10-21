@@ -11,7 +11,7 @@ export default class Home extends Component {
         <Helmet
           title={config.siteTitle}
         />
-        <h1 className="page--title">
+        <h1 className="page__title">
           International Relations Council
         </h1>
         <h3 className="page--description">

@@ -11,11 +11,13 @@ export default class Home extends Component {
         <Helmet
           title={config.siteTitle}
         />
-        <h1>
-          Home
+        <h1 className="page--title">
+          International Relations Council
         </h1>
+        <h3 className="page--description">
+          @ Berkeley
+        </h3>
       </div>
     );
   }
 }
-

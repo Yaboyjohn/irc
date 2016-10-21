@@ -10,36 +10,6 @@ export default class Template extends Component {
       <div>
         <Headroom>
           <div className="navbar">
-          <Link
-            to={prefixLink('/')}
-          >
-            Home
-          </Link>
-
-          <Link
-            to={prefixLink('/about/')}
-          >
-            About
-          </Link>
-
-          <Link
-            to={prefixLink('/events/')}
-          >
-            Events
-          </Link>
-
-          <Link
-            to={prefixLink('/review/')}
-          >
-            Review
-          </Link>
-
-          <Link
-            to={prefixLink('/contact/')}
-          >
-            Contact
-          </Link>
-        </div>
             <div className="navbar__link--wrapper">
               <Link
                 to={prefixLink('/')} className="navbar__link"
@@ -75,6 +45,7 @@ export default class Template extends Component {
                 Contact
               </Link>
             </div>
+          </div>
         </Headroom>
         <div className="content">
           {this.props.children}

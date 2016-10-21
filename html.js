@@ -25,6 +25,10 @@ export default class Html extends Component {
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"
+          />
           {head.title.toComponent()}
           {head.meta.toComponent()}
           {css}

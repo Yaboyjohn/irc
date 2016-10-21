@@ -4,13 +4,13 @@ import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
 
 require('css/_index.scss');
-
 export default class Template extends Component {
   render () {
     return (
       <div>
         <Headroom>
           <div className="navbar">
+<<<<<<< HEAD
           <Link
             to={prefixLink('/')}
           >
@@ -41,8 +41,45 @@ export default class Template extends Component {
             Contact
           </Link>
         </div>  
+=======
+            <div className="navbar__link--wrapper">
+              <Link
+                to={prefixLink('/')} className="navbar__link"
+              >
+                Home
+              </Link>
+            </div>
+            <div className="navbar__link--wrapper">
+              <Link
+                to={prefixLink('/about/')} className="navbar__link"
+              >
+                About
+              </Link>
+            </div>
+            <div className="navbar__link--wrapper">
+              <Link
+                to={prefixLink('/events/')} className="navbar__link"
+              >
+                Events
+              </Link>
+            </div>
+            <div className="navbar__link--wrapper">
+              <Link
+                to={prefixLink('/review/')} className="navbar__link"
+              >
+                Review
+              </Link>
+            </div>
+            <div className="navbar__link--wrapper">
+              <Link
+                to={prefixLink('/contact/')} className="navbar__link"
+              >
+                Contact
+              </Link>
+            </div>
+          </div>
+>>>>>>> 1c19e5f221eec7070a2bcd3fec4fb7203b3de510
         </Headroom>
-
         <div className="content">
           {this.props.children}
         </div>

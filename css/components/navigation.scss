@@ -1,1 +1,33 @@
 // Navbar styles
+.navbar {
+  width: 85%;
+  height: auto;
+  line-height: 1.2;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  background-color: $c__white;
+
+  @media (max-width: $s__breakpoint--large) {
+    width: 100%;
+  }
+
+  @media (max-width: $s__breakpoint--small) {
+    flex-direction: column;
+  }
+
+  .navbar__link--wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-self: center;
+
+    .navbar__link {
+      text-decoration: none;
+      color: $c__grey--light;
+
+      &:hover {
+        color: $c__black;
+      }
+    }
+  }
+}

@@ -10,7 +10,6 @@ export default class Template extends Component {
       <div>
         <Headroom>
           <div className="navbar">
-<<<<<<< HEAD
           <Link
             to={prefixLink('/')}
           >
@@ -40,8 +39,7 @@ export default class Template extends Component {
           >
             Contact
           </Link>
-        </div>  
-=======
+        </div>
             <div className="navbar__link--wrapper">
               <Link
                 to={prefixLink('/')} className="navbar__link"
@@ -77,8 +75,6 @@ export default class Template extends Component {
                 Contact
               </Link>
             </div>
-          </div>
->>>>>>> 1c19e5f221eec7070a2bcd3fec4fb7203b3de510
         </Headroom>
         <div className="content">
           {this.props.children}

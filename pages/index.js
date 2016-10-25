@@ -11,11 +11,7 @@ export default class Home extends Component {
         <Helmet
           title={config.siteTitle}
         />
-        <h1>
-          Home
-        </h1>
       </div>
     );
   }
 }
-

@@ -1,32 +1,102 @@
-// Navbar styles
+// Navbar styles, ty julia and christian
+
+*,
+*::before,
+*::after {
+  position: relative;
+  box-sizing: border-box;
+}
+
 .navbar {
-  width: 85%;
-  height: auto;
-  line-height: 1.2;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-around;
+  width: 100%;
+  opacity: 0.98;
+  transition: max-height 250ms;
+  overflow: hidden;
+  text-align: center;
+  max-height: $s__navbar-height;
   background-color: $c__white;
 
-  @media (max-width: $s__breakpoint--large) {
-    width: 100%;
-  }
-
-  @media (max-width: $s__breakpoint--small) {
-    flex-direction: column;
+  .navbar__hamburger {
+    display: none;
+    position: absolute;
+    top: $s__navbar-height * 0.25;
+    right: $s__navbar-height * 0.25;
+    height: $s__navbar-height * 0.5;
+    width: $s__navbar-height * 0.5;
+    
+    .hamburger__bar {
+      position: absolute;
+      background: $c__black;
+      width: 100%;
+      height: 2px;
+      transition: all 250ms;
+      
+      &.bar--1 {
+        top: 4px;
+      }
+      
+      &.bar--2 {
+        top: 20px;
+      }
+    }
   }
 
   .navbar__link--wrapper {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    align-self: center;
+    margin: 0 auto;
+    width: 95%;
 
     .navbar__link {
       text-decoration: none;
+      text-transform: uppercase;
+      display: inline-block;
       color: $c__grey--light;
+      line-height: $s__navbar-height;
+      transition: color 250ms;
+      padding-left: 2%;
+      padding-right: 2%;
+      margin: 0 24px;
 
       &:hover {
         color: $c__black;
+      }
+    } 
+  }
+  
+  // handle navbar change
+  @media (max-width: $s__breakpoint--small) {
+    .navbar__hamburger {
+      margin: 0 auto;
+      display: block;
+    }
+    
+    .navbar__link--wrapper {
+      margin-top: $s__navbar-height;
+      
+      .navbar__link {
+        // changed padding for more space to click
+        display: block;
+        padding-top: 16px; 
+        padding-bottom: 16px;
+        margin: 10px 0px;
+        line-height: 1;
+      }
+    }
+    
+    &.navbar--open {
+      max-height: ($s__navbar-height * 7) + (32 * 7);
+      
+      .navbar__hamburger {
+        .hamburger__bar {
+          &.bar--1 {
+            top: 12px;
+            transform: rotate(45deg);
+          }
+
+          &.bar--2 {
+            top: 12px;
+            transform: rotate(-45deg);
+          }
+        }
       }
     }
   }

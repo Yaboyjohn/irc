@@ -51,6 +51,18 @@
             ol {
               margin-left: 20px;
             }
+
+            a {
+              color:teal;
+
+              &:hover {
+                color: lighten(teal, 15%);
+                -o-transition: color .2s;
+                -ms-transition: color .2s;
+                -moz-transition: color .2s;
+                -webkit-transition: color .2s;
+              }
+            }
           }
 
           @media (max-width: $s__breakpoint--large) {

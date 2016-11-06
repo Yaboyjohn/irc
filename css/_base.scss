@@ -1,6 +1,102 @@
 // Base styles that can be applied to any element
 
 .content {
-	
-}
+  .page {
+    color: #404040;
+    padding: 50px 0px;
 
+    .page__title {
+      text-align: center;
+      font-size: 40px;
+      padding-bottom: 30px;
+    }
+
+    .navbar-nav {
+      margin: 0;
+      padding-bottom: 30px;
+      text-align: center;
+
+      &:hover {
+        cursor: pointer;
+      }
+
+      li {
+        display: inline-block;
+        margin-right: 40px;
+        font-size: 27px;
+      }
+    }
+
+    .page__content {
+      margin: 0 auto;
+      width: 75%;
+
+      .col {
+        display: inline-block;
+
+        &.col--1 {
+          font-size: 27px;
+          width: 28%;
+          color: teal;
+          vertical-align: top;
+          text-align: right;
+          padding: 0px 25px;
+
+          @media (max-width: $s__breakpoint--large) {
+            text-align: center;
+            width: 100%;
+          }
+        }
+
+        &.col--2 {
+          font-size: 18px;
+          width: 72%;
+          margin-bottom: 50px;
+          padding: 0px 25px;
+
+          .col--2__title {
+            font-size: 23px;
+            margin-bottom: 10px;
+            font-weight: 600;
+          }
+
+          .col--2__section {
+            margin-bottom: 50px;
+            line-height: 30px;
+
+            ol {
+              margin-left: 20px;
+            }
+
+            a {
+              color:teal;
+
+              &:hover {
+                color: lighten(teal, 15%);
+                -o-transition: color .2s;
+                -ms-transition: color .2s;
+                -moz-transition: color .2s;
+                -webkit-transition: color .2s;
+              }
+            }
+          }
+
+          @media (max-width: $s__breakpoint--large) {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-top: 20px;
+            width: 100%;
+          }
+        }
+
+        @media (max-width: $s__breakpoint--large) {
+          display: block;
+        }
+      }
+
+      @media (max-width: $s__breakpoint--large) {
+        width: 100%;
+      }
+    }
+  }
+}

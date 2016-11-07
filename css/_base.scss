@@ -8,7 +8,22 @@
     .page__title {
       text-align: center;
       font-size: 40px;
-      padding-bottom: 75px;
+    }
+      
+    .page__nav {
+      margin: 40px 0;
+      font-size: 20px;
+      text-align: center;
+      
+      .page__nav--link {
+        transition: color 250ms;
+        cursor: pointer;
+        text-decoration: underline;
+
+        &:hover {
+          color: teal;
+        }
+      }
     }
 
     .page__content {

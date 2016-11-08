@@ -8,6 +8,7 @@
     .page__title {
       text-align: center;
       font-size: 40px;
+<<<<<<< HEAD
       padding-bottom: 30px;
     }
 
@@ -24,6 +25,23 @@
         display: inline-block;
         margin-right: 40px;
         font-size: 27px;
+=======
+    }
+      
+    .page__nav {
+      margin: 40px 0;
+      font-size: 20px;
+      text-align: center;
+      
+      .page__nav--link {
+        transition: color 250ms;
+        cursor: pointer;
+        text-decoration: underline;
+
+        &:hover {
+          color: teal;
+        }
+>>>>>>> 75bce3cb3183bb59759b4ae55e65c777edda2576
       }
     }
 

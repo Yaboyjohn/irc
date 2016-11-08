@@ -3,13 +3,26 @@ import Helmet from 'react-helmet';
 import { config } from 'config';
 import { Link } from 'react-router';
 import { prefixLink } from 'gatsby-helpers';
-var Scroll  = require('react-scroll');
 
-var Element    = Scroll.Element;
-var scroll     = Scroll.animateScroll;
-var scrollSpy  = Scroll.scrollSpy;
+import Scroll from 'react-scroll';
+
+const Element = Scroll.Element;
+const scroller = Scroll.scroller;
 
 export default class Review extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  scroll (target) {
+    scroller.scrollTo(target, {
+      duration: 500,
+      delay: 100,
+      smooth: true,
+      offset: -20
+    })
+  }
+
   render () {
     return (
       <div className="page page--review">
@@ -19,11 +32,13 @@ export default class Review extends Component {
         <div className="page__title">
           IRC Review
         </div>
-        <ul className="nav navbar-nav">
-          <li><a onClick={() => scroll.scrollTo(220)}>Application Guidelines</a></li>
-          <li><a onClick={() => scroll.scrollToBottom()}>Archives</a></li>
-        </ul>
+        <div className="page__nav">
+          <span className="page__nav--link" onClick={this.scroll.bind(this, "guidelines")}>Application Guidelines</span>
+          <span className="page__nav--pipe"> | </span>
+          <span className="page__nav--link" onClick={this.scroll.bind(this, "archives")}>Archives</span>
+        </div>
         <div className="page__content">
+          <Element name="guidelines"></Element>
           <div className="col col--1">Application Guidelines</div>
           <div className="col col--2">
             <div className="col--2__section">
@@ -61,7 +76,12 @@ export default class Review extends Component {
               </ol>
             </div>
           </div>
+<<<<<<< HEAD
 
+=======
+
+          <Element name="archives"></Element>
+>>>>>>> 75bce3cb3183bb59759b4ae55e65c777edda2576
           <div className="col col--1">Archives</div>
           <div className="col col--2">
             <div className="col--2__section">
